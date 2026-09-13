@@ -46,6 +46,11 @@
   nav .links { display: flex; gap: 22px; font-weight: 600; font-size: .95rem; }
   nav .links a { color: var(--ink); text-decoration: none; }
   nav .links a:hover, nav .links a:focus-visible { color: var(--teal); }
+  .nav-right { display: none; align-items: center; gap: 10px; }
+  .book-pill { font-family: var(--display); font-weight: 700; font-size: .92rem; padding: 8px 16px; border-radius: 999px; background: var(--plum); color: var(--oyster); text-decoration: none; white-space: nowrap; }
+  .menu-btn { width: 44px; height: 44px; border: 2px solid var(--plum); border-radius: 12px 14px 11px 15px; background: transparent; display: grid; place-items: center; cursor: pointer; padding: 0; }
+  .menu-btn svg { width: 24px; height: 20px; }
+  .menu-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--gold); }
 
   /* Buttons */
   .btn { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 1.02rem; padding: 12px 22px; border-radius: 999px; text-decoration: none; border: 2.5px solid var(--plum); color: var(--plum); background: transparent; transition: transform .12s ease; }
@@ -106,10 +111,13 @@
   footer .wordmark { font-size: 1.15rem; }
 
   @media (max-width: 860px) {
-    /* One-page site: on small screens the menu is the wordmark plus one pill. Scrolling does the rest. */
-    nav { flex-wrap: nowrap; }
-    nav .links a:not(.book) { display: none; }
-    nav .links .book { display: inline-block; font-family: var(--display); font-weight: 700; font-size: .92rem; padding: 8px 16px; border-radius: 999px; background: var(--plum); color: var(--oyster); white-space: nowrap; }
+    /* Small screens: wordmark, a Book pill, and a menu button that opens the section links below. */
+    nav { flex-wrap: wrap; }
+    .nav-right { display: flex; }
+    nav .links { display: none; flex-basis: 100%; flex-direction: column; gap: 0; margin-top: 10px; background: var(--oyster); border-radius: 16px 20px 14px 18px; padding: 6px 0; }
+    nav.open .links { display: flex; }
+    nav .links a { padding: 12px 18px; border-bottom: 1px dashed var(--line); font-size: 1.05rem; }
+    nav .links a:last-child { border-bottom: 0; }
   }
   @media (max-width: 760px) {
     .hero, .split { grid-template-columns: 1fr; }
@@ -126,16 +134,35 @@
 </svg>
 
 <div class="wrap">
-<nav>
+<nav id="nav">
   <a class="wordmark" href="#top">house<i>·</i>work</a>
-  <div class="links">
+  <div class="nav-right">
+    <a class="book-pill" href="#book">Book a call</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <svg class="hand" viewBox="0 0 28 22" aria-hidden="true"><path d="M3 4 C 10 3, 18 5, 25 4 M3 11 C 10 10, 18 12, 25 11 M3 18 C 10 17, 18 19, 25 18" stroke-width="2.6"/></svg>
+    </button>
+  </div>
+  <div class="links" id="menu">
     <a href="#idea">The idea</a>
     <a href="#who">Who I am</a>
     <a href="#what">What I do</a>
     <a href="#how">How it works</a>
-    <a href="#book" class="book">Book a call</a>
+    <a href="#book">Book a call</a>
   </div>
 </nav>
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), btn = document.getElementById('menu-btn'), menu = document.getElementById('menu');
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    btn.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  })();
+</script>
 
 <header class="hero" id="top">
   <div>
