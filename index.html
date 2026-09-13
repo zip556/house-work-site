@@ -23,7 +23,8 @@
     --body: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
   }
   html { color-scheme: light; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; padding-inline: 20px; padding-block: 0 48px; }
+  html { overflow-x: hidden; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; padding-inline: 20px; padding-block: 0 48px; overflow-x: hidden; overflow-wrap: break-word; }
   * { box-sizing: border-box; }
   a { color: var(--teal); }
   h1, h2, h3 { font-family: var(--display); color: var(--plum); text-wrap: balance; line-height: 1.1; margin: 0; }
@@ -62,8 +63,13 @@
   /* Hero */
   .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; align-items: center; padding-block: 44px 56px; }
   .hero h1 { font-size: clamp(2.2rem, 5.2vw, 3.7rem); font-weight: 800; letter-spacing: -.02em; }
-  .hero h1 em { font-style: normal; position: relative; white-space: nowrap; }
-  .hero h1 em svg { position: absolute; left: -2%; right: -2%; bottom: -.12em; width: 104%; height: .42em; }
+  /* The underlined phrase wraps freely with a teal underline; the hand-drawn SVG underline only appears on wide screens where the phrase fits on one line. */
+  .hero h1 em { font-style: normal; text-decoration: underline; text-decoration-color: var(--teal); text-decoration-thickness: .1em; text-underline-offset: .1em; text-decoration-skip-ink: none; }
+  .hero h1 em svg { display: none; }
+  @media (min-width: 981px) {
+    .hero h1 em { position: relative; white-space: nowrap; text-decoration: none; }
+    .hero h1 em svg { display: block; position: absolute; left: -2%; right: -2%; bottom: -.12em; width: 104%; height: .42em; }
+  }
   .hero .lede { font-size: 1.18rem; margin-top: 20px; color: var(--ink); }
   .hero-art { justify-self: center; width: min(100%, 380px); }
 
