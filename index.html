@@ -105,10 +105,15 @@
   footer { padding-top: 34px; font-size: .88rem; color: var(--muted); max-width: 70ch; }
   footer .wordmark { font-size: 1.15rem; }
 
+  @media (max-width: 860px) {
+    /* One-page site: on small screens the menu is the wordmark plus one pill. Scrolling does the rest. */
+    nav { flex-wrap: nowrap; }
+    nav .links a:not(.book) { display: none; }
+    nav .links .book { display: inline-block; font-family: var(--display); font-weight: 700; font-size: .92rem; padding: 8px 16px; border-radius: 999px; background: var(--plum); color: var(--oyster); white-space: nowrap; }
+  }
   @media (max-width: 760px) {
     .hero, .split { grid-template-columns: 1fr; }
     .hero-art { order: -1; width: min(70%, 260px); }
-    nav .links { gap: 14px; font-size: .9rem; }
   }
   @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 </style>
@@ -128,7 +133,7 @@
     <a href="#who">Who I am</a>
     <a href="#what">What I do</a>
     <a href="#how">How it works</a>
-    <a href="#book">Book a call</a>
+    <a href="#book" class="book">Book a call</a>
   </div>
 </nav>
 
