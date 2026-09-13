@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House Work</title>
+<meta name="description" content="Client care for real estate agents, run by a Realtor and client experience expert. Julia McAinsh takes care of your system so you can focus on sales.">
+<meta property="og:title" content="House Work">
+<meta property="og:description" content="Client care for real estate agents, run by a Realtor and client experience expert. Julia McAinsh takes care of your system so you can focus on sales.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://house-work.ca/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2346294d'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%231f8a86'/%3E%3C/svg%3E">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+  /* House Work: single committed theme. Paper and ink, painted explicitly so it holds on any host ground. */
+  :root {
+    --plum: #46294d; --ink: #2a1f2e; --oyster: #f4f0f2; --paper: #faf7f8; --teal: #1f8a86; --gold: #d9a441;
+    --muted: #7a6d7d; --line: #e4dbe2;
+    --display: "Bricolage Grotesque", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+  }
+  html { color-scheme: light; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; padding-inline: 20px; padding-block: 0 48px; }
+  * { box-sizing: border-box; }
+  a { color: var(--teal); }
+  h1, h2, h3 { font-family: var(--display); color: var(--plum); text-wrap: balance; line-height: 1.1; margin: 0; }
+  h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 700; margin-bottom: 18px; }
+  p { margin: 0 0 16px; max-width: 62ch; }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  .eyebrow { font-family: var(--display); font-weight: 700; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+
+  /* Hand-drawn wobble applied to illustration strokes and rules */
+  svg.hand { overflow: visible; }
+  .hand path, .hand circle, .hand line, .hand polyline { fill: none; stroke: var(--plum); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; filter: url(#wobble); }
+  .hand .teal { stroke: var(--teal); }
+  .hand .gold { stroke: var(--gold); }
+  .hand .fillgold { fill: var(--gold); stroke: none; filter: none; opacity: .85; }
+
+  /* Nav */
+  nav { display: flex; justify-content: space-between; align-items: center; padding-block: 22px 8px; gap: 16px; flex-wrap: wrap; }
+  .wordmark { font-family: var(--display); font-weight: 700; font-size: 1.55rem; letter-spacing: -.02em; color: var(--plum); text-decoration: none; }
+  .wordmark i { font-style: normal; color: var(--teal); }
+  nav .links { display: flex; gap: 22px; font-weight: 600; font-size: .95rem; }
+  nav .links a { color: var(--ink); text-decoration: none; }
+  nav .links a:hover, nav .links a:focus-visible { color: var(--teal); }
+
+  /* Buttons */
+  .btn { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 1.02rem; padding: 12px 22px; border-radius: 999px; text-decoration: none; border: 2.5px solid var(--plum); color: var(--plum); background: transparent; transition: transform .12s ease; }
+  .btn.primary { background: var(--plum); color: var(--oyster); }
+  .btn:hover, .btn:focus-visible { transform: translateY(-1px) rotate(-.4deg); outline: none; }
+  .btn:focus-visible { box-shadow: 0 0 0 3px var(--gold); }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 26px; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; align-items: center; padding-block: 44px 56px; }
+  .hero h1 { font-size: clamp(2.2rem, 5.2vw, 3.7rem); font-weight: 800; letter-spacing: -.02em; }
+  .hero h1 em { font-style: normal; position: relative; white-space: nowrap; }
+  .hero h1 em svg { position: absolute; left: -2%; right: -2%; bottom: -.12em; width: 104%; height: .42em; }
+  .hero .lede { font-size: 1.18rem; margin-top: 20px; color: var(--ink); }
+  .hero-art { justify-self: center; width: min(100%, 380px); }
+
+  /* Sections */
+  section { padding-block: 44px; border-top: 1px solid var(--line); }
+  .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+  .quote { font-family: var(--display); font-weight: 500; font-size: clamp(1.35rem, 2.6vw, 1.75rem); color: var(--plum); line-height: 1.3; margin: 0 0 22px; max-width: 24ch; }
+  .quote strong { font-weight: 800; }
+
+  /* Doodle portrait (placeholder until a real photo) */
+  .doodle-wrap { width: min(100%, 340px); margin-inline: auto; text-align: center; }
+  .doodle { width: 100%; height: auto; }
+  .doodle path, .doodle circle { stroke-width: 2.3; }
+  .doodle-note { font-size: .85rem; color: var(--muted); margin-top: 6px; font-style: italic; }
+
+  /* Services */
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px 36px; margin-top: 8px; }
+  .svc h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+  .svc h3 svg { width: 26px; height: 26px; flex: 0 0 auto; }
+  .svc p { font-size: 1rem; margin: 0; }
+
+  /* How it works */
+  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px 32px; }
+  .how div { border-top: 3px solid var(--gold); padding-top: 12px; }
+  .how b { font-family: var(--display); font-size: 1.08rem; color: var(--plum); display: block; margin-bottom: 4px; }
+  .how p { font-size: .98rem; margin: 0; }
+
+  /* Proof */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 18px; margin-bottom: 22px; }
+  .stat { background: var(--oyster); border-radius: 14px 18px 12px 20px; padding: 18px 20px; }
+  .stat .n { font-family: var(--display); font-weight: 800; font-size: 2.2rem; color: var(--plum); line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat .l { font-size: .9rem; color: var(--muted); margin-top: 6px; }
+  .fill { color: var(--teal); border-bottom: 2px dotted var(--teal); font-style: italic; }
+
+  /* Book */
+  #book { background: var(--plum); color: var(--oyster); border-radius: 26px 30px 24px 32px; padding: 44px 36px; margin-top: 44px; border: 0; }
+  #book h2, #book .eyebrow { color: var(--oyster); }
+  #book .eyebrow { color: var(--gold); }
+  #book p { color: var(--oyster); }
+  #book .btn { border-color: var(--gold); background: var(--gold); color: var(--plum); }
+  #book .btn.ghost { background: transparent; color: var(--oyster); border-color: var(--oyster); }
+  .embed-note { margin-top: 22px; padding: 16px 18px; border: 2px dashed rgba(244,240,242,.5); border-radius: 14px; font-size: .92rem; color: var(--oyster); }
+
+  footer { padding-top: 34px; font-size: .88rem; color: var(--muted); max-width: 70ch; }
+  footer .wordmark { font-size: 1.15rem; }
+
+  @media (max-width: 760px) {
+    .hero, .split { grid-template-columns: 1fr; }
+    .hero-art { order: -1; width: min(70%, 260px); }
+    nav .links { gap: 14px; font-size: .9rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div class="wrap">
+<nav>
+  <a class="wordmark" href="#top">house<i>·</i>work</a>
+  <div class="links">
+    <a href="#idea">The idea</a>
+    <a href="#who">Who I am</a>
+    <a href="#what">What I do</a>
+    <a href="#how">How it works</a>
+    <a href="#book">Book a call</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <h1>People don't remember the paperwork. They remember <em>how you made them feel.<svg class="hand" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path class="teal" d="M4 14 C 60 6, 120 20, 180 12 S 300 4, 396 13" stroke-width="5"/></svg></em></h1>
+    <p class="lede">Client care for real estate agents, run by a Realtor and client experience expert. I take care of your system so you can focus on what you're good at: sales.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#book">Book a discovery call</a>
+      <a class="btn" href="#how">See how it works</a>
+    </div>
+  </div>
+  <svg class="hand hero-art" viewBox="0 0 320 300" role="img" aria-label="A hand-drawn house with a warm light in the window">
+    <!-- roof -->
+    <path d="M42 150 L160 48 L280 152"/>
+    <!-- walls -->
+    <path d="M68 138 L66 262 L256 260 L254 136"/>
+    <!-- door -->
+    <path d="M140 262 L141 196 C 141 182, 181 182, 181 196 L182 262"/>
+    <circle cx="172" cy="232" r="2.5"/>
+    <!-- window with warm light -->
+    <path class="fillgold" d="M92 172 h44 v40 h-44 z"/>
+    <path d="M92 172 h44 v40 h-44 z M114 172 v40 M92 192 h44"/>
+    <path d="M196 172 h40 v40 h-40 z M216 172 v40 M196 192 h40"/>
+    <!-- chimney and smoke -->
+    <path d="M216 96 v-34 h22 v54"/>
+    <path class="teal" d="M232 50 C 226 40, 240 34, 234 24" stroke-width="2"/>
+    <!-- ground line and a couple of tufts -->
+    <path d="M22 268 C 90 262, 200 274, 300 266"/>
+    <path class="teal" d="M40 262 c 3 -8, 6 -8, 9 0 M286 260 c 3 -8, 6 -8, 9 0" stroke-width="2"/>
+    <!-- check mark on the door, the House Work touch -->
+    <path class="teal" d="M150 214 l 8 9 l 16 -18" stroke-width="3.2"/>
+  </svg>
+</header>
+
+<section id="idea">
+  <div class="split">
+    <div>
+      <div class="eyebrow">The idea</div>
+      <p class="quote">What separates truly successful agents from everyone else? It isn't talent. <strong>It's a system.</strong></p>
+    </div>
+    <div>
+      <p>Plenty of great agents never get past a certain size. The difference is a system that runs whether or not you had time for it today.</p>
+      <p>House Work is that system. Every client touchpoint from the first hello to a week past closing, handled, in your voice, on time. It streamlines your business and it gives you your time back.</p>
+      <p><strong>Better leverage, more humanity. That's the goal.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="split">
+    <div class="doodle-wrap">
+      <svg class="hand doodle" viewBox="0 0 320 380" role="img" aria-label="A hand-drawn doodle of Julia on a couch with her fluffy dog">
+        <!-- paper blob behind -->
+        <path style="fill:#f4f0f2;stroke:none;filter:none" d="M40 60 C 70 10, 250 0, 290 50 C 320 90, 310 300, 270 340 C 230 385, 60 380, 30 330 C -5 280, 10 110, 40 60 Z"/>
+        <!-- couch back -->
+        <path d="M34 214 C 60 196, 260 196, 288 214"/>
+        <path d="M34 214 v70 M288 214 v70"/>
+        <!-- hair (behind head) -->
+        <path style="fill:#e9c27a" d="M124 92 C 118 60, 200 52, 196 96 C 206 120, 202 150, 196 170 C 188 176, 176 172, 172 166 C 170 140, 150 140, 148 166 C 144 172, 130 176, 124 170 C 116 150, 114 120, 124 92 Z"/>
+        <!-- face -->
+        <path style="fill:#fbf1ea" d="M160 62 C 184 62, 194 82, 192 104 C 190 126, 176 138, 160 138 C 144 138, 130 126, 128 104 C 126 82, 136 62, 160 62 Z"/>
+        <!-- fringe -->
+        <path d="M130 90 C 140 70, 158 66, 176 74 C 184 78, 188 86, 190 94"/>
+        <!-- eyes and smile -->
+        <path d="M147 100 c 3 -4, 8 -4, 11 0 M163 100 c 3 -4, 8 -4, 11 0" stroke-width="2.2"/>
+        <circle style="fill:#46294d;stroke:none;filter:none" cx="152" cy="101" r="1.9"/>
+        <circle style="fill:#46294d;stroke:none;filter:none" cx="168" cy="101" r="1.9"/>
+        <path d="M149 118 C 155 126, 166 126, 172 118" stroke-width="2.2"/>
+        <!-- earrings -->
+        <circle class="gold" cx="130" cy="112" r="2"/><circle class="gold" cx="190" cy="112" r="2"/>
+        <!-- neck -->
+        <path d="M152 138 v10 M168 138 v10"/>
+        <!-- denim jacket -->
+        <path style="fill:#c9dbe9" d="M120 156 C 132 146, 150 146, 160 154 C 170 146, 188 146, 200 156 C 216 170, 218 210, 212 240 L 108 240 C 102 210, 104 170, 120 156 Z"/>
+        <!-- jacket collar and opening -->
+        <path d="M152 150 L 142 168 L 160 158 L 178 168 L 168 150"/>
+        <path d="M160 158 v 82"/>
+        <!-- pocket flaps -->
+        <path d="M124 186 h 22 M172 186 h 22" stroke-width="2"/>
+        <!-- striped dress under jacket -->
+        <path style="fill:#ffffff" d="M150 162 L 160 158 L 170 162 v 78 h -20 z"/>
+        <path style="fill:#ffffff" d="M108 240 h 104 C 226 262, 234 292, 236 320 L 92 320 C 94 292, 100 262, 108 240 Z"/>
+        <path class="teal" d="M116 246 v 70 M132 244 v 74 M148 242 v 76 M164 242 v 76 M180 244 v 74 M196 246 v 70 M212 250 v 66" stroke-width="2"/>
+        <path class="teal" d="M156 166 v 72 M164 166 v 72" stroke-width="2"/>
+        <!-- hands on lap -->
+        <path style="fill:#fbf1ea" d="M118 236 c -6 6, -4 14, 4 14 c 8 0, 12 -8, 8 -14 z M198 236 c 6 6, 4 14, -4 14 c -8 0, -12 -8, -8 -14 z"/>
+        <!-- legs and sandals -->
+        <path d="M200 320 C 206 336, 214 346, 226 352 M226 352 c 8 2, 14 0, 16 -4" stroke-width="2.4"/>
+        <path class="gold" d="M212 348 l 26 0" stroke-width="2"/>
+        <!-- rug line -->
+        <path d="M26 356 C 100 348, 220 362, 296 354"/>
+        <!-- the dog: body -->
+        <path style="fill:#f8f1e6" d="M74 286 C 62 272, 74 254, 92 258 C 104 246, 132 246, 142 262 C 168 258, 186 278, 176 300 C 188 310, 180 328, 166 326 C 150 340, 112 342, 92 328 C 70 330, 58 306, 74 286 Z"/>
+        <!-- dog head -->
+        <path style="fill:#f8f1e6" d="M86 246 C 80 224, 100 206, 122 208 C 142 206, 160 224, 154 246 C 158 262, 138 274, 120 272 C 102 274, 82 262, 86 246 Z"/>
+        <!-- ears -->
+        <path style="fill:#f8f1e6" d="M88 236 C 74 238, 68 260, 80 268 C 90 272, 94 254, 92 244 Z M152 236 C 166 238, 172 260, 160 268 C 150 272, 146 254, 148 244 Z"/>
+        <!-- fluffy top -->
+        <path d="M96 214 c 4 -8, 10 -8, 12 -2 c 4 -8, 12 -8, 14 -1 c 4 -8, 12 -6, 14 1" stroke-width="2"/>
+        <!-- eyes, nose, tongue -->
+        <circle style="fill:#46294d;stroke:none;filter:none" cx="110" cy="240" r="2.4"/>
+        <circle style="fill:#46294d;stroke:none;filter:none" cx="130" cy="240" r="2.4"/>
+        <path style="fill:#46294d" d="M116 250 c 2 -3, 6 -3, 8 0 c -1 3, -7 3, -8 0 z"/>
+        <path style="fill:#e39a9a;stroke:#46294d" d="M116 258 c 0 6, 8 6, 8 0 z" stroke-width="1.6"/>
+        <!-- front paws -->
+        <path d="M100 326 c -4 8, 2 12, 10 8 M134 328 c -2 8, 6 12, 12 8" stroke-width="2.2"/>
+        <!-- a little heart between them -->
+        <path class="teal" d="M188 262 c -4 -6, -10 -2, -8 3 c 2 4, 6 6, 8 9 c 2 -3, 6 -5, 8 -9 c 2 -5, -4 -9, -8 -3 z" stroke-width="1.8"/>
+      </svg>
+      <div class="doodle-note">A doodle for now. A real photo of Julia (and possibly the dog) goes here.</div>
+    </div>
+    <div>
+      <div class="eyebrow">Who I am</div>
+      <h2>I'm Julia McAinsh.</h2>
+      <p>I'm a Realtor and a client experience expert. I built this program on real listings, ran it on hundreds of transactions, and coached it to other teams.</p>
+      <p>I'm not a developer with a product. I'm an agent who got tired of watching good people drop balls they didn't have time to catch, and built something that catches them.</p>
+      <p><strong>I walk the walk. Now I want to run it for you.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="eyebrow">What I do</div>
+  <h2>Your client care lead, working inside your own tools.</h2>
+  <div class="services">
+    <div class="svc">
+      <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path class="teal" d="M4 14 l 6 6 l 12 -14"/></svg>Intake and setup</h3>
+      <p>Welcome email, property questionnaire, deal folder, and a lifecycle board for every listing or purchase. Your clients hear from a real person on day one.</p>
+    </div>
+    <div class="svc">
+      <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 22 L13 5 L22 22 Z"/></svg>Listing prep and launch</h3>
+      <p>I book and chase your inspector, stager, cleaner, and photographer, draft your write-up and fact sheet, prep the MLS data sheet, and send the "we're live" email with everything attached. Coming soon, just listed, and sold posts, ready for your feed.</p>
+    </div>
+    <div class="svc">
+      <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 20 L9 12 L14 16 L23 5"/></svg>While it's on the market</h3>
+      <p>A weekly property update so your sellers keep a finger on the pulse and see the work you're doing. Tough conversations get easier when nothing comes as a surprise. Showing feedback relayed the same day.</p>
+    </div>
+    <div class="svc">
+      <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 5 h16 v16 h-16 z M9 11 h8 M9 15 h5"/></svg>Offers and conditions</h3>
+      <p>An offer summary for you, the accepted-offer email for them, a condition tracker with reminders, and steady check-ins that keep everything on track.</p>
+    </div>
+    <div class="svc">
+      <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><circle cx="9" cy="9" r="5"/><path d="M13 12 l 9 9 M18 17 l 3 -3 M15 20 l 3 -3"/></svg>Firm to close, and after</h3>
+      <p>Touchpoints scheduled backwards from closing: revisits, utilities, moving date, keys, week-before, closing day. Then the week-after check-in, the review ask, and a clean hand-off to your long-term plan.</p>
+    </div>
+    <div class="svc">
+      <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 22 C 4 15, 3 9, 8 6 C 11 4, 13 7, 13 8 C 13 7, 15 4, 18 6 C 23 9, 22 15, 13 22 Z"/></svg>Your moments, on cue</h3>
+      <p>I'll remind you when to drop off the moving kit, when a pop-by lands best, when a call from you would mean the most. You show up; I make sure you never miss the moment.</p>
+    </div>
+  </div>
+  <p style="margin-top:22px"><strong>Buyers too.</strong> Same system, from consult to keys.</p>
+</section>
+
+<section id="how">
+  <div class="eyebrow">How it works</div>
+  <h2>Your tools, my process.</h2>
+  <div class="how">
+    <div><b>You keep your stack.</b><p>Your CRM, your email, your e-signature, your MLS. I join as a member of your team.</p></div>
+    <div><b>My eyes on everything.</b><p>Nothing goes to a client without me reading it first. Your voice, your call when it matters, my follow-through.</p></div>
+    <div><b>Sounds like you on your best day.</b><p>Every message is written in your voice. We're built on an AI platform, and an expert human touch is always the last step.</p></div>
+    <div><b>Monday to Friday.</b><p>I work business hours and I schedule your clients' touchpoints the same way. Nobody gets a "happy closing day" text at 11pm on a Saturday.</p></div>
+    <div><b>What I don't do.</b><p>Showings, signs, lockboxes, drop-offs, pricing advice, negotiating. That's you. That's the point.</p></div>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="eyebrow">Track record</div>
+  <h2>Hundreds of transactions. One system.</h2>
+  <div class="split">
+    <div>
+      <p>I've run this program on hundreds of transactions and coached it to other teams. It works on a quiet week and it works in a multiple-offer frenzy.</p>
+      <p>The agents I've worked with got their evenings back. Their clients noticed.</p>
+    </div>
+    <p class="quote" style="font-size:1.25rem">"<span class="fill">A short client or agent quote about how it felt, not about the paperwork.</span>"</p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="eyebrow">Book a discovery call</div>
+  <h2>Thirty minutes. No pitch deck.</h2>
+  <p>You tell me how your business runs and where things fall through the cracks. I'll tell you honestly whether House Work fits, and what it would look like on your next listing.</p>
+  <div class="cta-row">
+    <a class="btn" href="#book">Book a time</a>
+    <a class="btn ghost" href="mailto:hello@house-work.ca">or email me</a>
+  </div>
+  <div class="embed-note">Draft note: the Google Calendar booking page embeds right here once the House Work Google account exists. It will show Monday to Friday slots only, and the email link will point at the House Work address.</div>
+</section>
+
+<footer>
+  <a class="wordmark" href="#top">house<i>·</i>work</a>
+  <p>Ottawa · <span class="fill">hello@house-work.ca</span></p>
+  <p>Julia McAinsh is a registered real estate salesperson with <span class="fill">[brokerage]</span>. House Work provides client care and administrative services to real estate agents only, and does not trade in real estate.</p>
+</footer>
+</div>
+</body>
+</html>
