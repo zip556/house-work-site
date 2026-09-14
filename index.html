@@ -97,6 +97,38 @@
   .how b { font-family: var(--display); font-size: 1.08rem; color: var(--plum); display: block; margin-bottom: 4px; }
   .how p { font-size: .98rem; margin: 0; }
 
+  /* The system: a numbered flow of stages */
+  .flow { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 44px; counter-reset: stage; }
+  .flow li { position: relative; background: var(--oyster); border-radius: 16px 20px 14px 18px; padding: 18px 20px; }
+  .flow li.paid { border: 2.5px solid var(--gold); }
+  .flow li b { font-family: var(--display); font-size: 1.1rem; color: var(--plum); display: flex; align-items: center; gap: 10px; margin-bottom: 8px; line-height: 1.15; }
+  .flow li b::before { counter-increment: stage; content: counter(stage); width: 30px; height: 30px; border-radius: 50% 45% 55% 50%; background: var(--gold); color: var(--plum); display: grid; place-items: center; font-size: .95rem; font-weight: 800; flex: 0 0 auto; }
+  .flow li p { font-size: .95rem; margin: 0; }
+  .flow .arrow { position: absolute; right: -40px; top: 50%; width: 36px; height: 22px; transform: translateY(-50%); }
+  .flow li:nth-child(3n) .arrow, .flow li:last-child .arrow { display: none; }
+  .flow-note { margin-top: 22px; font-size: .95rem; color: var(--muted); }
+  @media (max-width: 900px) {
+    .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .flow li:nth-child(3n) .arrow { display: block; }
+    .flow li:nth-child(2n) .arrow, .flow li:last-child .arrow { display: none; }
+  }
+  @media (max-width: 600px) {
+    .flow { grid-template-columns: 1fr; gap: 30px; }
+    .flow li .arrow, .flow li:nth-child(2n) .arrow, .flow li:nth-child(3n) .arrow { display: block; right: auto; left: 50%; top: auto; bottom: -30px; transform: translateX(-50%) rotate(90deg); }
+    .flow li:last-child .arrow { display: none; }
+  }
+
+  /* FAQ */
+  .faq { max-width: 72ch; margin-top: 8px; }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; font-family: var(--display); font-weight: 700; font-size: 1.12rem; color: var(--plum); padding: 16px 44px 16px 0; position: relative; line-height: 1.25; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 1.7rem; line-height: 1; color: var(--teal); font-weight: 500; transition: transform .15s ease; }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq summary:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--gold); border-radius: 8px; }
+  .faq details p { margin: 0 0 18px; font-size: 1rem; max-width: 66ch; }
+
   /* Proof */
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 18px; margin-bottom: 22px; }
   .stat { background: var(--oyster); border-radius: 14px 18px 12px 20px; padding: 18px 20px; }
@@ -152,7 +184,9 @@
     <a href="#idea">The idea</a>
     <a href="#who">Who I am</a>
     <a href="#what">What I do</a>
+    <a href="#system">The system</a>
     <a href="#how">How it works</a>
+    <a href="#faq">FAQ</a>
     <a href="#book">Book a call</a>
   </div>
 </nav>
@@ -210,7 +244,8 @@
     </div>
     <div>
       <p>Plenty of great agents never get past a certain size. The difference is a system that runs whether or not you had time for it today.</p>
-      <p>House Work is that system. Every client touchpoint from the first hello to a week past closing, handled, in your voice, on time. It streamlines your business and it gives you your time back.</p>
+      <p>House Work is that system. Every client touchpoint from the first hello to a week past closing, handled, in your voice, on time. And it's proactive: your clients get the answer before they ask the question, often before they know they have one.</p>
+      <p>Chasing the inspector. Lining up the stager and the photographer. Answering "any news?" at 9pm. That's the work that eats your week. I take it off your plate, and you get your power and your freedom back.</p>
       <p><strong>Better leverage, more humanity. That's the goal.</strong></p>
     </div>
   </div>
@@ -299,11 +334,11 @@
     </div>
     <div class="svc">
       <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 22 L13 5 L22 22 Z"/></svg>Listing prep and launch</h3>
-      <p>I book and chase your inspector, stager, cleaner, and photographer, draft your write-up and fact sheet, prep the MLS data sheet, and send the "we're live" email with everything attached. Coming soon, just listed, and sold posts, ready for your feed.</p>
+      <p>I run your pre-listing plan, whatever it includes: stager, photographer, cleaner, inspector. Booked, confirmed, chased. I draft your write-up, put the listing details together up front so buyers and their agents aren't calling to ask, prep the MLS data sheet, and send the "we're live" email with everything attached. Coming soon, just listed, and sold posts, ready for your feed.</p>
     </div>
     <div class="svc">
       <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 20 L9 12 L14 16 L23 5"/></svg>While it's on the market</h3>
-      <p>A weekly property update so your sellers keep a finger on the pulse and see the work you're doing. Tough conversations get easier when nothing comes as a surprise. Showing feedback relayed the same day.</p>
+      <p>A weekly property update so your sellers keep a finger on the pulse and see the work you're doing. Tough conversations get easier when nothing comes as a surprise.</p>
     </div>
     <div class="svc">
       <h3><svg class="hand" viewBox="0 0 26 26" aria-hidden="true"><path d="M5 5 h16 v16 h-16 z M9 11 h8 M9 15 h5"/></svg>Offers and conditions</h3>
@@ -321,15 +356,32 @@
   <p style="margin-top:22px"><strong>Buyers too.</strong> Same system, from consult to keys.</p>
 </section>
 
+<section id="system">
+  <div class="eyebrow">The system</div>
+  <h2>From green light to paid out, nothing gets dropped.</h2>
+  <p>Every deal runs on its own lifecycle board. On the seller side that's 27 stages and roughly 190 steps, each with a date and an owner. Here's the short version.</p>
+  <ol class="flow">
+    <li><b>Green light</b><p>You've got a signed client. Welcome email, questionnaire, deal folder, board built, group chat open. They hear from a real person on day one.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>Listing prep</b><p>Your pre-listing plan, run to the letter: stager, photographer, cleaner, inspector, whatever you use. Booked, confirmed, chased. Inspection report read and items flagged for your review.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>Collateral</b><p>Write-up drafted. Listing details packaged up front, in your brand, so nobody has to call and ask. MLS data sheet and attachments ready for input.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>Launch</b><p>Listing paperwork out for signature, show-ready tips, the "we're live" email, showing instructions, coming soon and just listed posts.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>On the market</b><p>The weekly property update, so your sellers see the work and nothing comes as a surprise. Open house coordination. Price change communication.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>Offers</b><p>Offer summary for you, presentation logistics, then the accepted-offer email and deposit instructions for them. Everyone knows what happens next.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>Conditions</b><p>A tracker with due-date reminders two days out and the morning of, for you and for your clients. "The waiting is hard" check-ins along the way.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li><b>Firm to close</b><p>Revisits, utilities, moving date, keys, the week before, closing day, all scheduled backwards from closing. Lawyer and FINTRAC package prepped.</p><svg class="hand arrow" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></li>
+    <li class="paid"><b>Paid out, and after</b><p>Happy closing day. Sold post. The week-after check-in, the review request, and a clean hand-off to your long-term plan. Clients for life, referrals to follow.</p></li>
+  </ol>
+  <p class="flow-note">Buyers run the same way: consult, search, offer, conditions, firm to close, keys, and after.</p>
+</section>
+
 <section id="how">
   <div class="eyebrow">How it works</div>
   <h2>Your tools, my process.</h2>
   <div class="how">
     <div><b>You keep your stack.</b><p>Your CRM, your email, your e-signature, your MLS. I join as a member of your team.</p></div>
     <div><b>My eyes on everything.</b><p>Nothing goes to a client without me reading it first. Your voice, your call when it matters, my follow-through.</p></div>
-    <div><b>Sounds like you on your best day.</b><p>Every message is written in your voice. We're built on an AI platform, and an expert human touch is always the last step.</p></div>
-    <div><b>Monday to Friday.</b><p>I work business hours and I schedule your clients' touchpoints the same way. Nobody gets a "happy closing day" text at 11pm on a Saturday.</p></div>
-    <div><b>What I don't do.</b><p>Showings, signs, lockboxes, drop-offs, pricing advice, negotiating. That's you. That's the point.</p></div>
+    <div><b>Sounds like you on your best day.</b><p>Every message is written in your voice, with an expert human touch on every one before it goes out.</p></div>
+    <div><b>Proactive, not reactive.</b><p>Your clients hear from us before they think to ask. Fewer surprises, fewer "any update?" texts, and a lot more calm on both ends of the deal.</p></div>
   </div>
 </section>
 
@@ -345,6 +397,54 @@
   </div>
 </section>
 
+<section id="faq">
+  <div class="eyebrow">FAQ</div>
+  <h2>Questions agents ask me.</h2>
+  <div class="faq">
+    <details>
+      <summary>Are you client facing?</summary>
+      <p>Yes. Your clients hear from a real person, introduced as client care for your team, under your name and your brand. You're still the agent. I'm the follow-through.</p>
+    </details>
+    <details>
+      <summary>I don't have a database or a system yet.</summary>
+      <p>No problem. I'll help you get your database set up, and we run my system, tweaked to match your brand and the way you talk to people. You don't have to build anything.</p>
+    </details>
+    <details>
+      <summary>I don't need the whole program. What are my options?</summary>
+      <p>Let's talk. One-off projects and single tools are on the table: a weekly update your sellers actually read, a closing countdown for your buyers, a lifecycle board you run yourself. Tell me where it hurts and we'll scope it.</p>
+    </details>
+    <details>
+      <summary>What does it cost?</summary>
+      <p>It depends on the size of your business and the number of transactions you do. What I can tell you now: it's certainly less than a full-time assistant on your payroll. We'll put real numbers on it in the discovery call.</p>
+    </details>
+    <details>
+      <summary>What are some examples of what you send to clients?</summary>
+      <p>The welcome email on day one. The "we're live" email with the listing details attached. A weekly property update with the showing stats and your read on them. The accepted-offer email that explains what happens next. Condition due-date reminders. The closing countdown: revisits, utilities, movers, keys. Happy closing day. The week-after check-in. Ask on the call and I'll walk you through a real sequence.</p>
+    </details>
+    <!-- Zip's suggested questions below. Julia to keep, cut, or reword. -->
+    <details>
+      <summary>Will it sound like me?</summary>
+      <p>That's the whole point. You tell me the vibe of your brand and how you talk to people, and I write to that. I read every message before it goes out. If it doesn't sound like you on your best day, it doesn't go.</p>
+    </details>
+    <details>
+      <summary>Do you show up at the property?</summary>
+      <p>No. House Work is virtual. Showings, signs, lockboxes, and drop-offs stay with you or your vendor. I coordinate them so they happen on time, and I chase whoever needs chasing.</p>
+    </details>
+    <details>
+      <summary>Does this work for buyers?</summary>
+      <p>Yes. Same system, from consult to keys: showing messages, weekly check-ins, the inspection countdown, condition tracking, the closing sequence, and the after-close care.</p>
+    </details>
+    <details>
+      <summary>What do you need from me?</summary>
+      <p>Access to your tools, a feel for your brand and how you like to talk to people, and a green light on each deal. After that I run it, keep my eyes on everything, and you add your insight where it matters.</p>
+    </details>
+    <details>
+      <summary>How do we start?</summary>
+      <p>Book a discovery call. Thirty minutes, no pitch deck. If it fits, we plan the setup together. Getting integrated into your tools and your brand takes a little time up front, and it's worth doing properly.</p>
+    </details>
+  </div>
+</section>
+
 <section id="book">
   <div class="eyebrow">Book a discovery call</div>
   <h2>Thirty minutes. No pitch deck.</h2>
@@ -353,7 +453,7 @@
     <a class="btn" href="#book">Book a time</a>
     <a class="btn ghost" href="mailto:hello@house-work.ca">or email me</a>
   </div>
-  <div class="embed-note">Draft note: the Google Calendar booking page embeds right here once the House Work Google account exists. It will show Monday to Friday slots only, and the email link will point at the House Work address.</div>
+  <div class="embed-note">Draft note: the Google Calendar booking page embeds right here once the House Work Google account exists. The email link will point at the House Work address.</div>
 </section>
 
 <footer>
