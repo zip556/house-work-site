@@ -143,7 +143,8 @@
   #book p { color: var(--oyster); }
   #book .btn { border-color: var(--gold); background: var(--gold); color: var(--plum); }
   #book .btn.ghost { background: transparent; color: var(--oyster); border-color: var(--oyster); }
-  .embed-note { margin-top: 22px; padding: 16px 18px; border: 2px dashed rgba(244,240,242,.5); border-radius: 14px; font-size: .92rem; color: var(--oyster); }
+  .booking { margin-top: 26px; background: #fff; border-radius: 18px 22px 16px 24px; overflow: hidden; }
+  .booking iframe { display: block; width: 100%; height: 640px; border: 0; }
 
   footer { padding-top: 34px; font-size: .88rem; color: var(--muted); max-width: 70ch; }
   footer .wordmark { font-size: 1.15rem; }
@@ -450,10 +451,12 @@
   <h2>Thirty minutes. No pitch deck.</h2>
   <p>You tell me how your business runs and where things fall through the cracks. I'll tell you honestly whether House Work fits, and what it would look like on your next listing.</p>
   <div class="cta-row">
-    <a class="btn" href="#book">Book a time</a>
+    <a class="btn" href="https://calendar.app.google/JVDXQEsi8fwoxHcN9" target="_blank" rel="noopener">Open the booking page</a>
     <a class="btn ghost" href="mailto:julia@house-work.ca">or email me</a>
   </div>
-  <div class="embed-note">Draft note: the Google Calendar booking page embeds right here once the booking page is set up on the House Work Google account.</div>
+  <div class="booking">
+    <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0FcMZUh7-PRQD4wLtEDzdoha0KVT_7RMIasjzrD7yb9HoU14EOcVzJM_G1X3l-AUcZa67kUqmb?gv=true" title="Book a discovery call with Julia" loading="lazy"></iframe>
+  </div>
 </section>
 
 <footer>
