@@ -161,6 +161,8 @@
   @media (max-width: 760px) {
     .hero, .split { grid-template-columns: 1fr; }
     .hero-art { order: -1; width: min(70%, 260px); }
+    /* The embedded booking widget is too cramped on phones; the button opens Google's full-screen page instead. */
+    .booking { display: none; }
   }
   @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 </style>
