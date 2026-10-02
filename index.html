@@ -79,11 +79,10 @@
   .quote { font-family: var(--display); font-weight: 500; font-size: clamp(1.35rem, 2.6vw, 1.75rem); color: var(--plum); line-height: 1.3; margin: 0 0 22px; max-width: 24ch; }
   .quote strong { font-weight: 800; }
 
-  /* Doodle portrait (placeholder until a real photo) */
+  /* Doodle portrait */
   .doodle-wrap { width: min(100%, 340px); margin-inline: auto; text-align: center; }
   .doodle { width: 100%; height: auto; }
   .doodle path, .doodle circle { stroke-width: 2.3; }
-  .doodle-note { font-size: .85rem; color: var(--muted); margin-top: 6px; font-style: italic; }
 
   /* Services */
   .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px 36px; margin-top: 8px; }
@@ -134,7 +133,6 @@
   .stat { background: var(--oyster); border-radius: 14px 18px 12px 20px; padding: 18px 20px; }
   .stat .n { font-family: var(--display); font-weight: 800; font-size: 2.2rem; color: var(--plum); line-height: 1; font-variant-numeric: tabular-nums; }
   .stat .l { font-size: .9rem; color: var(--muted); margin-top: 6px; }
-  .fill { color: var(--teal); border-bottom: 2px dotted var(--teal); font-style: italic; }
 
   /* Book */
   #book { background: var(--plum); color: var(--oyster); border-radius: 26px 30px 24px 32px; padding: 44px 36px; margin-top: 44px; border: 0; }
@@ -210,7 +208,7 @@
 <header class="hero" id="top">
   <div>
     <h1>People don't remember the paperwork. They remember <em>how you made them feel.<svg class="hand" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path class="teal" d="M4 14 C 60 6, 120 20, 180 12 S 300 4, 396 13" stroke-width="5"/></svg></em></h1>
-    <p class="lede">Client care for real estate agents, run by a Realtor and client experience expert. I take care of your system so you can focus on what you're good at: sales.</p>
+    <p class="lede">Client care for real estate agents, run by a Realtor and client experience expert. I take care of your system so you can focus on your superpower: sales.</p>
     <div class="cta-row">
       <a class="btn primary" href="#book">Book a discovery call</a>
       <a class="btn" href="#how">See how it works</a>
@@ -315,7 +313,6 @@
         <!-- a little heart between them -->
         <path class="teal" d="M188 262 c -4 -6, -10 -2, -8 3 c 2 4, 6 6, 8 9 c 2 -3, 6 -5, 8 -9 c 2 -5, -4 -9, -8 -3 z" stroke-width="1.8"/>
       </svg>
-      <div class="doodle-note">A doodle for now. A real photo of Julia (and possibly the dog) goes here.</div>
     </div>
     <div>
       <div class="eyebrow">Who I am</div>
@@ -382,7 +379,7 @@
   <div class="eyebrow">How it works</div>
   <h2>Your tools, my process.</h2>
   <div class="how">
-    <div><b>You keep your stack.</b><p>Your CRM, your email, your e-signature, your MLS. I join as a member of your team.</p></div>
+    <div><b>You keep your stack.</b><p>Your CRM, your email, your e-signature, your MLS.</p></div>
     <div><b>My eyes on everything.</b><p>Nothing goes to a client without me reading it first. Your voice, your call when it matters, my follow-through.</p></div>
     <div><b>Sounds like you on your best day.</b><p>Every message is written in your voice, with an expert human touch on every one before it goes out.</p></div>
     <div><b>Proactive, not reactive.</b><p>Your clients hear from us before they think to ask. Fewer surprises, fewer "any update?" texts, and a lot more calm on both ends of the deal.</p></div>
@@ -402,13 +399,8 @@
 <section id="proof">
   <div class="eyebrow">Track record</div>
   <h2>Hundreds of transactions. One system.</h2>
-  <div class="split">
-    <div>
-      <p>I've run this program on hundreds of transactions and coached it to other teams. It works on a quiet week and it works in a multiple-offer frenzy.</p>
-      <p>The agents I've worked with got their evenings back. Their clients noticed.</p>
-    </div>
-    <p class="quote" style="font-size:1.25rem">"<span class="fill">A short client or agent quote about how it felt, not about the paperwork.</span>"</p>
-  </div>
+  <p>I've run this program on hundreds of transactions and coached it to other teams. It works on a quiet week and it works in a multiple-offer frenzy.</p>
+  <p>The agents I've worked with got their evenings back. Their clients noticed.</p>
 </section>
 
 <section id="faq">
@@ -417,7 +409,7 @@
   <div class="faq">
     <details>
       <summary>Are you client facing?</summary>
-      <p>Yes. Your clients hear from a real person, introduced as client care for your team, under your name and your brand. You're still the agent. I'm the follow-through.</p>
+      <p>Yes. Your clients hear from a real person, introduced as client care for your team, under your brand. You're still the agent. I'm the follow-through.</p>
     </details>
     <details>
       <summary>I don't have a database or a system yet.</summary>
@@ -435,7 +427,6 @@
       <summary>What are some examples of what you send to clients?</summary>
       <p>The welcome email on day one. The "we're live" email with the listing details attached. A weekly property update with the showing stats and your read on them. The accepted-offer email that explains what happens next. Condition due-date reminders. The closing countdown: revisits, utilities, movers, keys. Happy closing day. Ask on the call and I'll walk you through a real sequence.</p>
     </details>
-    <!-- Zip's suggested questions below. Julia to keep, cut, or reword. -->
     <details>
       <summary>Will it sound like me?</summary>
       <p>That's the whole point. You tell me the vibe of your brand and how you talk to people, and I write to that. I read every message before it goes out. If it doesn't sound like you on your best day, it doesn't go.</p>
@@ -475,7 +466,7 @@
 <footer>
   <a class="wordmark" href="#top">house<i>·</i>work</a>
   <p>Ottawa · <a href="mailto:julia@house-work.ca">julia@house-work.ca</a></p>
-  <p>Julia McAinsh is a registered real estate salesperson with <span class="fill">[brokerage]</span>. House Work provides client care and administrative services to real estate agents only, and does not trade in real estate.</p>
+  <p>House Work provides client care and administrative services to real estate agents only, and does not trade in real estate.</p>
 </footer>
 </div>
 </body>
