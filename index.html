@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>House Work - Client Care for Real Estate Agents</title>
-<meta name="description" content="Client care for real estate agents, run by a Realtor and client experience expert. Julia McAinsh takes care of your system so you can focus on sales.">
+<meta name="description" content="Client care and custom tools for real estate agents, run by a Realtor and client experience expert. Julia McAinsh takes care of your system so you can focus on sales.">
 <meta property="og:title" content="House Work - Client Care for Real Estate Agents">
-<meta property="og:description" content="Client care for real estate agents, run by a Realtor and client experience expert. Julia McAinsh takes care of your system so you can focus on sales.">
+<meta property="og:description" content="Client care and custom tools for real estate agents, run by a Realtor and client experience expert. Julia McAinsh takes care of your system so you can focus on sales.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://house-work.ca/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2346294d'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%231f8a86'/%3E%3C/svg%3E">
@@ -72,6 +72,27 @@
   }
   .hero .lede { font-size: 1.18rem; margin-top: 20px; color: var(--ink); }
   .hero-art { justify-self: center; width: min(100%, 380px); }
+  /* Two doors: client care or a one-off project */
+  .doors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+  .door { display: block; background: var(--oyster); border: 2.5px solid transparent; border-radius: 16px 20px 14px 18px; padding: 16px 18px; color: var(--ink); text-decoration: none; transition: transform .12s ease, border-color .12s ease; }
+  .door b { font-family: var(--display); font-size: 1.15rem; color: var(--plum); display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .door b svg { width: 28px; height: 18px; flex: 0 0 auto; }
+  .door p { font-size: .95rem; margin: 0; }
+  .door:hover, .door:focus-visible { transform: translateY(-1px) rotate(-.3deg); border-color: var(--teal); outline: none; }
+  .door:focus-visible { box-shadow: 0 0 0 3px var(--gold); }
+  @media (max-width: 480px) { .doors { grid-template-columns: 1fr; } }
+
+  /* Projects: idea cards and the three steps */
+  .ideas { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 22px; }
+  .ideas li { background: var(--oyster); border-radius: 16px 20px 14px 18px; padding: 16px 18px; }
+  .ideas li b { font-family: var(--display); font-size: 1.08rem; color: var(--plum); display: block; margin-bottom: 4px; }
+  .ideas li p { font-size: .95rem; margin: 0; }
+  .ideas-note { margin-top: 18px; font-size: 1rem; }
+  .steps { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px 32px; counter-reset: step; }
+  .steps li { border-top: 3px solid var(--gold); padding-top: 12px; }
+  .steps li b { font-family: var(--display); font-size: 1.08rem; color: var(--plum); display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .steps li b::before { counter-increment: step; content: counter(step); width: 28px; height: 28px; border-radius: 50% 45% 55% 50%; background: var(--gold); color: var(--plum); display: grid; place-items: center; font-size: .9rem; font-weight: 800; flex: 0 0 auto; }
+  .steps li p { font-size: .98rem; margin: 0; }
 
   /* Sections */
   section { padding-block: 44px; border-top: 1px solid var(--line); }
@@ -187,6 +208,7 @@
     <a href="#what">What I do</a>
     <a href="#system">The system</a>
     <a href="#how">How it works</a>
+    <a href="#projects">Projects</a>
     <a href="#faq">FAQ</a>
     <a href="#book">Book a call</a>
   </div>
@@ -208,10 +230,19 @@
 <header class="hero" id="top">
   <div>
     <h1>People don't remember the paperwork. They remember <em>how you made them feel.<svg class="hand" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path class="teal" d="M4 14 C 60 6, 120 20, 180 12 S 300 4, 396 13" stroke-width="5"/></svg></em></h1>
-    <p class="lede">Client care for real estate agents, run by a Realtor and client experience expert. I take care of your system so you can focus on your superpower: sales.</p>
+    <p class="lede">Client care and custom tools for real estate agents, run by a Realtor and client experience expert. I take care of your system so you can focus on your superpower: sales.</p>
+    <div class="doors">
+      <a class="door" href="#what">
+        <b>Client care<svg class="hand" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></b>
+        <p>I run your system for you, every deal, end to end, under your brand.</p>
+      </a>
+      <a class="door" href="#projects">
+        <b>Projects<svg class="hand" viewBox="0 0 36 22" aria-hidden="true"><path class="teal" d="M2 11 C 10 9, 20 13, 30 11 M23 4 l 8 7 l -8 7" stroke-width="2.4"/></svg></b>
+        <p>I build you a tool that takes a chunk of busy work off your plate for good.</p>
+      </a>
+    </div>
     <div class="cta-row">
       <a class="btn primary" href="#book">Book a discovery call</a>
-      <a class="btn" href="#how">See how it works</a>
     </div>
   </div>
   <svg class="hand hero-art" viewBox="0 0 320 300" role="img" aria-label="A hand-drawn house with a warm light in the window">
@@ -403,6 +434,33 @@
   <p>The agents I've worked with got their evenings back. Their clients noticed.</p>
 </section>
 
+<section id="projects">
+  <div class="eyebrow">Projects</div>
+  <h2>Got a process that lives in your head and three spreadsheets? Let's make it a tool.</h2>
+  <p>This is the other side of House Work. One-off projects for agents who want a piece of their business to run itself. No program, no retainer. Just the thing that's been eating your week, fixed.</p>
+  <p>I built these tools for my own team first and tested every one personally. They transformed our business and took away so much busy work. They're AI-powered, and that's the point: the tool does the repetitive part, you keep the judgment.</p>
+  <ul class="ideas">
+    <li><b>Offer dashboard</b><p>Every offer on a listing in one view, side by side, so you're comparing instead of scrolling through PDFs.</p></li>
+    <li><b>Site visit sheet</b><p>Walk the house with your phone, tap through the rooms, and the details land in your inbox ready to build the listing.</p></li>
+    <li><b>Listing launch flow</b><p>Pick the photos, draft the write-up, build the brochure. One pass instead of three apps and an afternoon.</p></li>
+    <li><b>Weekly performance update</b><p>Showing stats and activity pulled together every week, in your brand, with a spot for your read on them. Your sellers actually open it.</p></li>
+    <li><b>Cashflow tracker</b><p>Closings in, expenses out, updated as deals move, without you touching a spreadsheet.</p></li>
+    <li><b>Closing timeline</b><p>Every date between firm and keys laid out for your clients: revisits, utilities, movers, lawyer, closing day. One page they'll stick on the fridge.</p></li>
+    <li><b>Posts on cue</b><p>Coming soon, just listed, sold. Drafted in your brand the moment the deal hits that stage, ready for your feed.</p></li>
+    <li><b>Dates that chase you</b><p>Conditions, closings, revisits: pulled from the agreement, reminders set, for you and for your clients.</p></li>
+  </ul>
+  <p class="ideas-note"><strong>These are ideas, not a menu.</strong> The best projects start with "I wish I didn't have to..." Tell me where it hurts and we'll see what's possible.</p>
+  <ol class="steps">
+    <li><b>A call</b><p>You walk me through how it works today and where the time goes.</p></li>
+    <li><b>A scope and a quote</b><p>What it does, what it doesn't, and what it costs, before anything gets built.</p></li>
+    <li><b>Built, tested, handed over</b><p>Built in your own accounts, tested with you, handed over with a walkthrough. It's yours.</p></li>
+  </ol>
+  <p style="margin-top:26px"><strong>I'm not a developer selling software.</strong> I'm an agent who built these for her own business, ran them on real deals, and knows which ones are worth building.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="#book">Tell me where it hurts</a>
+  </div>
+</section>
+
 <section id="faq">
   <div class="eyebrow">FAQ</div>
   <h2>Questions agents ask me.</h2>
@@ -421,7 +479,11 @@
     </details>
     <details>
       <summary>I don't need the whole program. What are my options?</summary>
-      <p>Let's talk. One-off projects and single tools are on the table: a weekly update your sellers actually read, a closing countdown for your buyers, a lifecycle board you run yourself. Tell me where it hurts and we'll scope it.</p>
+      <p>Then look at <a href="#projects">Projects</a>. One-off builds and single tools are on the table: an offer dashboard, a listing launch flow, a weekly update your sellers actually read, a lifecycle board you run yourself. Tell me where it hurts and we'll scope it.</p>
+    </details>
+    <details>
+      <summary>What's the difference between client care and a project?</summary>
+      <p>Client care is ongoing: I run your deals, week in and week out, under your brand. A project is a build: I make you a tool, hand it over, and you run it. Some agents want one, some want both. Either way it starts with the same call.</p>
     </details>
     <details>
       <summary>What does it cost?</summary>
@@ -457,7 +519,7 @@
 <section id="book">
   <div class="eyebrow">Book a discovery call</div>
   <h2>Thirty minutes. No pitch deck.</h2>
-  <p>You tell me how your business runs and where things fall through the cracks. I'll tell you honestly whether House Work fits, and what it would look like on your next listing.</p>
+  <p>You tell me how your business runs and where things fall through the cracks. I'll tell you honestly whether House Work fits, what it would look like on your next listing, or which project would make the biggest dent.</p>
   <div class="cta-row">
     <a class="btn" href="https://calendar.app.google/JVDXQEsi8fwoxHcN9" target="_blank" rel="noopener">Open the booking page</a>
     <a class="btn ghost" href="mailto:julia@house-work.ca">or email me</a>
